@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "437754aa-f123-45b5-9d81-5c290bc27c36",
+		"name": "LABAPP-1734",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7627899"
+	},
+	"item": [
+		{
+			"name": "Test creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"interval\": 300,\n    \"agents\": [\n        {\n            \"agentId\": \"<agent id>\"\n        }\n    ],\n    \"testName\": \"TE1 to Webex Amsterdam\",\n    \"protocol\": \"UDP\",\n    \"targetAgentId\": 364026\n}\n\n"
+				},
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/tests/agent-to-agent/new",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"tests",
+						"agent-to-agent",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Cloud Agents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ef969f45-d81a-482a-9c99-4a403d6f0729",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/agents?agentTypes=CLOUD",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"agents"
+					],
+					"query": [
+						{
+							"key": "agentTypes",
+							"value": "CLOUD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Enterprise Agents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ef969f45-d81a-482a-9c99-4a403d6f0729",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.thousandeyes.com/v6/agents?agentTypes=CLOUD",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thousandeyes",
+						"com"
+					],
+					"path": [
+						"v6",
+						"agents"
+					],
+					"query": [
+						{
+							"key": "agentTypes",
+							"value": "CLOUD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
