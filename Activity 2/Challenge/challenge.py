@@ -92,7 +92,6 @@ class CreateTest(Command):
         dest_agent = attachment_actions.inputs["taid"]
         test_name = attachment_actions.inputs["test_name"]
         proto = attachment_actions.inputs["proto"]
-        TETOKEN = "d8b6c6c5-dbef-465c-a3c8-6e2fa4ce1377"
         url = "https://api.thousandeyes.com/v6/tests/agent-to-agent/new"
 
         TE_headers = {

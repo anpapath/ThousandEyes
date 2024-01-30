@@ -57,8 +57,7 @@
             "type": "Input.Number",
             "placeholder": "Input the agent id of another source agent ",
             "id": "said_2",
-            "label": "Source Agent id (optional)",
-            "value": 1
+            "label": "Source Agent id (optional)"
         },
         {
             "type": "Input.Number",
