@@ -93,7 +93,7 @@ class CreateTest(Command):
         test_name = attachment_actions.inputs["test_name"]
         proto = attachment_actions.inputs["proto"]
         TETOKEN = "d8b6c6c5-dbef-465c-a3c8-6e2fa4ce1377"
-        url = "https://api.thousandeyes.com/v7/tests/agent-to-agent/new"
+        url = "https://api.thousandeyes.com/v6/tests/agent-to-agent/new"
 
         TE_headers = {
             "Authorization": "Bearer " + TETOKEN,
