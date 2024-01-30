@@ -8,13 +8,12 @@ import requests
 import json
 import asyncio
 
-BOTEMAIL = ""# BOTEMAIL = "" # Your bot's email <bot_name>@webex.bot
+BOTEMAIL = "" # Your bot's email <bot_name>@webex.bot
 TEAMSTOKEN = "" # Your bot's token
 BOTAPPNAME = "" # Your bot's name
 TETOKEN = "" # The ThousandEyes OAuth token
 
 bot = WebexBot(teams_bot_token=TEAMSTOKEN,
-               approved_rooms=['<your room ID (Ctrl + Shift + K)>'],
                bot_name=BOTAPPNAME,
                include_demo_commands=True)
 
