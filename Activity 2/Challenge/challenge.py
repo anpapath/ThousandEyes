@@ -6,13 +6,12 @@ import requests
 import json
 import asyncio
 
-BOTEMAIL = ""# BOTEMAIL = "" # Your bot's email <bot_name>@webex.bot
+BOTEMAIL = "" # Your bot's email <bot_name>@webex.bot
 TEAMSTOKEN = "" # Your bot's token
 BOTAPPNAME = "" # Your bot's name
 TETOKEN = "" # The ThousandEyes OAuth token
 
 bot = WebexBot(teams_bot_token=TEAMSTOKEN,
-               approved_rooms=['<your room ID (Ctrl + Shift + K)>'],
                bot_name=BOTAPPNAME,
                include_demo_commands=True)
 
@@ -94,7 +93,7 @@ class CreateTest(Command):
         test_name = attachment_actions.inputs["test_name"]
         proto = attachment_actions.inputs["proto"]
         TETOKEN = "d8b6c6c5-dbef-465c-a3c8-6e2fa4ce1377"
-        url = "https://api.thousandeyes.com/v6/tests/agent-to-agent/new"
+        url = "https://api.thousandeyes.com/v7/tests/agent-to-agent/new"
 
         TE_headers = {
             "Authorization": "Bearer " + TETOKEN,
